@@ -2,7 +2,7 @@
 cada processo inscrito na planilha"""
 
 
-from controller import Controller
+from .controller import Controller
 
 import pyautogui
 

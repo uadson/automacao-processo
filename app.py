@@ -2,8 +2,7 @@
 
 Até o momento ele retorna os objetos com seus atributos e métodos"""
 
-from app.notify import *
-
+from app.notify import Notify
 
 app = Notify()
 app.control_screen()

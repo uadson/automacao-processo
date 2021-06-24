@@ -3,7 +3,7 @@
 
 from openpyxl import load_workbook
 
-from settings.base import DATABASE
+from . settings.base import DATABASE
 
 
 class Controller:
@@ -14,9 +14,10 @@ class Controller:
 		self.objetos.clear()
 		work_book = load_workbook(DATABASE)
 		plan = work_book['obj']
-		for cell in plan['A']:
-			if not cell.value == None:
-				self.objetos.append(cell.value)
+		self.objetos = [cell.value if not cell.value else cell.value for cell in plan['A']]
+		#for cell in plan['A']:
+		#	if not cell.value == None:
+		#		self.objetos.append(cell.value)
 		return self.objetos
 
 
