@@ -3,7 +3,7 @@
 
 from openpyxl import load_workbook
 
-from settings.base import DATABASE
+from app.settings.base import DATABASE
 
 
 class Controller:

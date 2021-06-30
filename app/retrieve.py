@@ -2,7 +2,7 @@
 cada processo inscrito na planilha"""
 
 
-from controller import Controller
+from app.controller import Controller
 
 import pyautogui
 
@@ -55,7 +55,7 @@ class Retrieve:
 
 			print(f'{i+1:2} - Processo: {dado} - Recebido')
 
-		print('PROCESSOS RECEBIDOS COM SUCESSO!')
+		print('PROCESSOS RECEBIDOS COM SUCESSO!\n')
 		# retorna para tela inicial
 		pyautogui.press('f3')
 

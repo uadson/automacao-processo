@@ -2,7 +2,7 @@
 cada processo inscrito na planilha"""
 
 
-from . controller import Controller
+from app.controller import Controller
 
 import pyautogui
 
@@ -68,6 +68,7 @@ class Notify:
 
 			print(f'Processo {dado} - Notificação {num_not}')
 
+		print('NOTIFICAÇÕES EMITIDAS!\n')
 		# retorna para tela inicial
 		pyautogui.press('f3')
 
