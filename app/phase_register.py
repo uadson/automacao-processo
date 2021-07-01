@@ -8,15 +8,13 @@ import pyautogui
 
 from time import sleep
 
-from datetime import date
+from datetime import datetime
 
 
 class PhaseRegister:
 
-	dia = date.today().day
-	month = date.today()
-	mes = month.strftime('%m')
-	ano = date.today().year
+	data = datetime.now()
+	data_atual = data.strftime('%d%m%Y')
 
 	def __init__(self):
 		self.objetos = Controller()
@@ -70,12 +68,12 @@ class PhaseRegister:
 			pyautogui.typewrite(cod);pyautogui.press('enter')
 			sleep(0.25)
 			# registrando a data
-			pyautogui.typewrite(str(self.dia))
+			pyautogui.typewrite(str(self.data_atual))
 			sleep(0.25)
-			pyautogui.typewrite(str(self.mes))
-			sleep(0.25)
-			pyautogui.typewrite(str(self.ano))
-			sleep(0.25)
+			#pyautogui.typewrite(str(self.mes))
+			#sleep(0.25)
+			#pyautogui.typewrite(str(self.ano))
+			#sleep(0.25)
 
 			pyautogui.press('enter')
 			sleep(0.25)

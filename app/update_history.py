@@ -8,7 +8,7 @@ import pyautogui
 
 from time import sleep
 
-from datetime import date
+from datetime import datetime
 
 
 class Update:
@@ -66,8 +66,8 @@ class Update:
 
 if __name__ == '__main__':
 
-	data = date.today()
-	data_atual = data.strftime('%d/%m/%Y')
+	data = datetime.now()
+	data_atual = data.strftime('%d%m%Y')
 
 	tipos = [
 		'NOTIFICACAO'

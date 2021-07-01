@@ -10,33 +10,27 @@ from app.phase_register import PhaseRegister
 from app.notify import Notify
 from app.update_history import Update
 
-from datetime import date
+from datetime import datetime
 
 from time import sleep
 
 
-data = date.today()
+data = datetime.now()
 data_atual = data.strftime('%d/%m/%Y')
 
-
 cod = input('Informe o código do andamento: ')
-
 
 tipos = [
 	'NOTIFICACAO'
 ]
 
-
 for num, tipo in enumerate(tipos):
 	print(num, tipo)
 
-
 opcao = input('Informe o tipo de documento: ')
-
 
 if opcao == '0':
 	historico = f'* OBS: EXPEDIDA NOTIFICACAO EM {data_atual} AGUARDANDO RETORNO DE AR.&&'
-
 
 num = int(input('Informe o número da notificação: '))
 
